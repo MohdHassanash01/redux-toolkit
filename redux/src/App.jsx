@@ -1,10 +1,13 @@
-import React from 'react'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { increment, incrementBYten } from './redux/features/counterSlice'
 
 const App = () => {
 
-  const dispatch = useDispatch()
+  // dispatch() is used to send an action to the Redux store.
+  const dispatch = useDispatch() 
+
+  // useSelector() is used to read/access data from the Redux store.
   const count = useSelector((state) => state.counter.value)
 
   return (
